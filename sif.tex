@@ -1,0 +1,166 @@
+\documentclass{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{makecell}
+\usepackage{gensymb}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage[polish]{babel}
+\usepackage{mathptmx}
+\usepackage[backend=biber, maxbibnames=3, style=nature, autocite=inline]{biblatex}
+
+
+\addbibresource{$HOME/Documents/latex/texfiles/bib.bib}
+
+% File-wide formatting and custom commands
+\title{Sif}
+
+\renewcommand{\refname}{Na podstawie:}
+\renewcommand{\tablename}{\textbf{Tabela}}
+\renewcommand{\figurename}{\textbf{Rysunek}}
+
+\setcounter{section}{1}
+\setlist{nosep}
+\parindent=0in
+
+\newenvironment{nscenter}
+ {\parskip=0pt\par\nopagebreak\centering}
+ {\par\noindent\ignorespacesafterend}
+
+\newcommand{\punkt}[2]{
+\draw [color=black,fill=black] (#1,#2) circle (0.035);}
+
+% Custom table alignments
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Custom overline for math mode
+\makeatletter
+\newsavebox\myboxA
+\newsavebox\myboxB
+\newlength\mylenA
+
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+\makeatother
+
+% Section Foramtting
+\titleformat{\section}
+{\sc \bfseries \Large \centering}
+{\thesection}
+{0,5em}
+{}
+
+\titleformat{\subsection}
+{\large \bfseries}
+{\thesubsection}
+{0,5em}
+{}
+
+\titleformat{\subsubsection}
+{\big \bfseries}
+{\thesubsubsection}
+{0,5em}
+{}
+
+\begin{document}
+
+% Titlepage template by Kacper Nojszewski
+\begin{titlepage}
+	\begin{center}
+	{\scshape\huge Szkoła Główna Gospodarstwa Wiejskiego \par}
+	\vspace{0.5cm}
+	{\scshape\LARGE Warszawa \par}
+	\vspace{0.5cm}
+	{\LARGE\bfseries Wydział Ogrodnictwa i Biotechnologii \\ Biotechnologia, rok 3 semestr 5 \par}
+	{\includegraphics[width=0.7\textwidth]{sif.png}}
+	\vfill
+	{\Large Autorzy pracy: \\}
+	{\large \textsc{Balcerak Michał} \\ \textsc{Guzek Jakub} \\ \textsc{Jakubiak Grzegorz} \\ \textsc{Kałuska Joanna} \\ \textsc{Klonowska Katarzyna} \\ \textsc{Kurowska Paulina} \\ \textsc{Siek Zuzanna} \\ \textsc{Śniadała Oliwia} \par}
+	\vspace{0.5cm}
+	{\Large Prowadzący \par
+	dr hab. \textsc{Hanna Kowalska}}
+
+\vfill
+
+% Bottom of the page
+	{\LARGE Data \\ <++> \par}
+	\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\include{sec1/sec1}
+
+\include{sec2/sec2}
+
+\nocite{Grote1988, Oh1987, Leite2020, Ziaja, 4Szpaki, Kosmopedia, KosmetykWszechCzasów, SubiektynikKosmetyczny, Loczek}
+
+\include{sec3/sec3}
+
+\include{sec4/sec4}
+
+\include{sec5/sec5}
+
+\section{Program i sezonowość produkcji, warianty produkcji w sezonie letnim i zimowym, bilans materiałowy}
+
+\section{Spis maszyn i urządzeń}
+
+\section{Rysunki schematyczne linii aparaturowych}
+
+\section{Bilans opakowań i materiałów pomocniczych}
+
+\section{Normy i akty prawne}
+
+\section{Warunki magazynowania surowców, produktów i niektórych materiałów pomocniczych}
+
+\section{Zestawienie powierzchni i magazynów produktów i materiałów pomocniczych}
+
+\section{Środki transportu zewnętrznego i wewnętrznego}
+
+\section{Zużycie wody i poszczególnych czynników energetycznych}
+
+\section{Rozmieszczenie maszyn i urządzeń}
+
+\section{Wielkość zatrudnienia, schemat struktury organizacyjnej}
+
+\section{Opis koncepcji zagospodarowania terenu}
+
+\section{Rodzaje odpadów i ich dobowa ilość}
+
+\section{Proponowane rozwiązania z zakresu ochrony środowiska}
+
+\section{Kontrola jakości, rozpoznanie możliwości wdrożenia wybranych norm jakościowych}
+
+\section{Wskaźniki techniczno-ekonomiczne}
+
+\newpage
+\renewcommand*{\bibfont}{\small}
+\printbibliography
+
+\end{document}
