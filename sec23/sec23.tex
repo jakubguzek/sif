@@ -9,13 +9,13 @@
 		\hline
 		\makecell[l]{\textbf{Nazwa} \\ \textbf{urządzenia}} & \makecell[l]{\textbf{Moc urządzenia} \\ $[\mathrm{\mathbf{kW}}]$} & \makecell[l]{\textbf{Czas pracy} \\ \textbf{na dobę} $[\mathbf{\mathrm{h}}]$} & \makecell[l]{\textbf{Czas pracy} \\ \textbf{na rok}} & \makecell[l]{\textbf{Zużycie energii} \\ \textbf{na dobę} $[\mathrm{\mathbf{kWh}}]$} & \makecell[l]{\textbf{Roczne zużycie} \\ \textbf{energii} $[\mathrm{\mathbf{kWh}}]$} \\
 		\hline\hline
-		Pompa do wody \textsf{Speroni CAM80} & 0,5 & 0,87* & 208,8* & 0,435 & 104,4 \\
-		Mieszalnik \textsf{ZRJ-1500} & 105 & 5 & 1200 & 525 & 126000 \\
-		Mieszalnik \textsf{ZRJ-750} & 60 & 7,5 & 1800 & 450 & 108000 \\
+		Pompa do wody \textsf{Speroni CAM80} & 0,5 & 1* & 240 & 0,5 & 120 \\
+		Mieszalnik \textsf{ZRJ-1500} & 105 & 5 & 1200 & 525 & 126\,000 \\
+		Mieszalnik \textsf{ZRJ-750} & 60 & 7,5 & 1800 & 450 & 108\,000 \\
 		Pompa dozująca \textsf{EURALCA} & 0,5 & 7* & 1680* & 3,5 & 840 \\
-		\makecell[l]{Nape?niarka rzędowa \\ \textsf{AT-L16 typ NPACK}} & 0,8 & 4,7* & 1128* & 3,76 & 902,4 \\
-		\makecell[l]{Obrotowa maszyna wlotowa \\ \textsf{NPACK-J}} & 1,6 & 3,91* & 938,4* & 6,256 & 1501,44 \\
-		\makecell[l]{Maszyna do \\ etykietowania butelek \textsf{NPACK-TB-YP}} & 0,2 & 3,91* & 938,4* & 0,782 & 187,68 \\
+		\makecell[l]{Nape?niarka rzędowa \\ \textsf{AT-L16 typ NPACK}} & 0,8 & 5* & 1200* & 4 & 960 \\
+		\makecell[l]{Obrotowa maszyna wlotowa \\ \textsf{NPACK-J}} & 1,6 & 4* & 960* & 6,4 & 1536 \\
+		\makecell[l]{Maszyna do \\ etykietowania butelek \textsf{NPACK-TB-YP}} & 0,2 & 4* & 960* & 0,8 & 192 \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -29,11 +29,11 @@
 		\hline
 		\makecell[l]{\textbf{Urządzenia zużywające} \\ \textbf{energię}} & \makecell[l]{\textbf{Miesięczne zużycie} \\ \textbf{energii elektrycznej} \\ $[\mathrm{\mathbf{kWh}}]$} & \makecell[l]{\textbf{Roczne zużycie} \\ \textbf{energii elektrycznej} \\ $[\mathrm{\mathbf{kWh}}]$}\\
 		\hline\hline
-		\makecell[l]{Urządzenia linii \\ produkcyjnej} & 19\,794,66 kWh & 237\,535,92 kWh \\
+		\makecell[l]{Urządzenia linii \\ produkcyjnej} & 19\,794,66 & 237\,535,92 \\
 		\hline
-		Laboratorium &  &  \\
+		Laboratorium & 1\,583.57 & 19\,002.87 \\
 		\hline
-		\makecell[l]{Pozostała część \\ zakładu} &  &  \\
+		\makecell[l]{Pozostała część \\ zakładu} & 1\,187.68 & 14\,252.16 \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -97,3 +97,7 @@ Zdolność produkcyjna
 		\hline
 	\end{tabular}
 \end{center}
+
+\begin{equation}
+	Z_{p} = \frac{1375\mathrm{l} + 1375\mathrm{l} + 625.2\mathrm{l} + 625.2\mathrm{l} + 625.2\mathrm{l}}{21252\mathrm{m^{2}}} = 0.21765 \frac{\mathrm{l}}{\mathrm{m^{2}}}
+\end{equation}
