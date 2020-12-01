@@ -4,5 +4,5 @@ TO DO
  * ~~Poprawić WSZYSTKIE tabele~~
  * Uzupełnić źródła w bibliografii
  * ~~Rozdział 9 (sec8)~~
- * Sekcja 21 i 23
+ * Sekcja 17, 21 i ~~23~~
  * Proofreading
